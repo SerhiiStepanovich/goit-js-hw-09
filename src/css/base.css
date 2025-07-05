@@ -22,6 +22,10 @@ body {
   min-width: 100vw;
   min-height: 100vh;
   margin: 0;
+  background-color: #fafafa;
+  color: #212121;
+  justify-content: center;
+  align-items: center;
 }
 
 main {
@@ -29,4 +33,7 @@ main {
 }
 main:has(.back-link) {
   text-align: center;
+}
+* {
+  box-sizing: border-box;
 }

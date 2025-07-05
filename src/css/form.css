@@ -1,0 +1,90 @@
+.feedback-form {
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 500px;
+  box-sizing: border-box;
+  animation: fadeIn 0.8s ease-out;
+}
+
+.feedback-form label {
+  display: block;
+  margin-bottom: 20px;
+  font-size: 1rem;
+  color: #333;
+  font-weight: 600;
+}
+
+.feedback-form input[type='email'],
+.feedback-form textarea {
+  width: calc(100% - 20px);
+  padding: 12px 10px;
+  margin-top: 8px;
+  border: 1px solid #dcdcdc;
+  border-radius: 8px;
+  font-size: 1rem;
+  color: #555;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  box-sizing: border-box;
+}
+
+.feedback-form input[type='email']:focus,
+.feedback-form textarea:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
+  outline: none;
+}
+
+.feedback-form textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.feedback-form button[type='submit'] {
+  background-color: #007bff;
+  color: #ffffff;
+  padding: 14px 25px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  width: 100%;
+  margin-top: 10px;
+  letter-spacing: 0.5px;
+}
+
+.feedback-form button[type='submit']:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+}
+
+.feedback-form button[type='submit']:active {
+  background-color: #004085;
+  transform: translateY(0);
+}
+
+@media (max-width: 600px) {
+  .feedback-form {
+    padding: 25px;
+    margin: 15px;
+  }
+
+  .feedback-form label {
+    font-size: 0.95rem;
+  }
+
+  .feedback-form input[type='email'],
+  .feedback-form textarea {
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+
+  .feedback-form button[type='submit'] {
+    padding: 12px 20px;
+    font-size: 1rem;
+  }
+}

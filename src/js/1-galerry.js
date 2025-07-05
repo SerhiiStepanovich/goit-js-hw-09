@@ -76,12 +76,12 @@ function createGalleryMarkup(imagesArray) {
     <a class = "gallery-link" href="${original}"> 
     <img
     class = "gallery-image"
-    src = "${preview}"
-   
+    src = "${preview}"   
     alt = "${description}"/> 
     </a>
     </li>`
     )
+
     .join('');
 }
 gallery.innerHTML = createGalleryMarkup(images);
@@ -90,22 +90,3 @@ const lightbox = new SimpleLightbox('.gallery a', {
   captionDelay: 250,
   captionPosition: 'bottom',
 });
-
-gallery.insertAdjacentHTML('beforeend', galleryMarkup);
-gallery.addEventListener('click', onGalleryClick);
-function onGalleryClick(event) {
-  event.preventDefault();
-  const target = event.target;
-
-  if (target.classList.contains('gallery-image')) {
-    const originalImageUrl = target.dataset.source;
-    const imageDescription = target.alt;
-    const instance = basicLightbox.create(`
-        <img
-        src = "${originalImageUrl}" 
-        alt = "${imageDescription}"
-        width = "1112"
-        height = "640">`);
-    instance.show();
-  }
-}
