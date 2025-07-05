@@ -86,7 +86,7 @@ function createGalleryMarkup(imagesArray) {
 }
 gallery.innerHTML = createGalleryMarkup(images);
 const lightbox = new SimpleLightbox('.gallery a', {
-  captionData: 'alt',
+  captionsData: 'alt',
   captionDelay: 250,
   captionPosition: 'bottom',
 });
